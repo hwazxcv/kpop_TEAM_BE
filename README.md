@@ -164,4 +164,4 @@
 
 - [천다연](https://github.com/cdayeon)
 
-- [황희승](https://github.com/hwazxcv)
+- [황희승](https://github.com/hwazxcv) : AWS EC2를 이용한 서버 및 젠킨스(CI/CD) 구축 , 관리자 기능 및 소셜 , 게시판 기능 구축
