@@ -1,0 +1,33 @@
+
+# default profile
+
+server:
+  port: 8082
+  servlet:
+    context-path: /
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+---
+
+spring:
+  config: # set profile
+    activate:
+      on-profiles: local
+
+  profiles:
+#    active: dev
+    include: oauth, jwt, data, mail, s3
+    group: # override production setting with application-dev.yml
+      local: oauth, jwt, data, mail, s3, dev
+---
+
+spring:
+  config: # set profile
+    activate:
+      on-profiles: prod
+  profiles:
+    group: # production settings
+      prod: oauth, jwt, data, mail, s3
+---
